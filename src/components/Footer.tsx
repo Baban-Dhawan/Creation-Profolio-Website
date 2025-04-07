@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#home" className="text-2xl font-bold text-white">
-              MONCY<span className="text-cyan-400">.</span>
+              CREATIONS<span className="text-cyan-400">.</span>
             </a>
             <p className="text-gray-400 mt-2 max-w-md">
               Creating elegant digital experiences through clean code and modern design.
@@ -32,7 +32,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Moncy. All rights reserved.
+            © {new Date().getFullYear()} Creations. All rights reserved.
           </p>
           
           <div className="mt-4 md:mt-0">

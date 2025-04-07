@@ -32,7 +32,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#home" className="text-2xl font-bold text-white">
-          MONCY<span className="text-cyan-400">.</span>
+          CREATIONS<span className="text-cyan-400">.</span>
         </a>
         
         {/* Desktop Menu */}

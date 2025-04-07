@@ -44,7 +44,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
-            Hello, I'm <span className="heading-gradient">Moncy</span>
+            Hello, I'm <span className="heading-gradient">Creations</span>
           </h1>
           
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-cyan-400 h-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>

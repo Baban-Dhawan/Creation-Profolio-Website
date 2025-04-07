@@ -71,47 +71,39 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <div className="hidden md:block md:col-span-4 lg:col-span-3 relative">
-            {/* This empty div acts as a placeholder to maintain layout when Hero image becomes fixed */}
-          </div>
-          
-          <div className="md:col-span-8 lg:col-span-9">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">Projects</h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl">
-              Explore my recent work across web development, design, and more. Each project represents a unique challenge solved with creativity and technical skill.
-            </p>
-            
-            <div className="flex flex-wrap gap-2 mb-10">
-              {categories.map((category) => (
-                <Button 
-                  key={category.id}
-                  variant={filter === category.id ? "default" : "outline"}
-                  className={filter === category.id 
-                    ? "bg-cyan-500 hover:bg-cyan-600 text-background" 
-                    : "border-gray-700 text-gray-300 hover:text-cyan-400 hover:border-cyan-400/50"
-                  }
-                  onClick={() => setFilter(category.id)}
-                >
-                  {category.label}
-                </Button>
-              ))}
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {filteredProjects.map((project, index) => (
-                <ProjectCard 
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.tags}
-                  imageUrl={project.imageUrl}
-                  projectUrl={project.projectUrl}
-                  delay={0.1 * index}
-                />
-              ))}
-            </div>
-          </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">Projects</h2>
+        <p className="text-lg text-gray-300 mb-8 max-w-2xl">
+          Explore my recent work across web development, design, and more. Each project represents a unique challenge solved with creativity and technical skill.
+        </p>
+        
+        <div className="flex flex-wrap gap-2 mb-10">
+          {categories.map((category) => (
+            <Button 
+              key={category.id}
+              variant={filter === category.id ? "default" : "outline"}
+              className={filter === category.id 
+                ? "bg-cyan-500 hover:bg-cyan-600 text-background" 
+                : "border-gray-700 text-gray-300 hover:text-cyan-400 hover:border-cyan-400/50"
+              }
+              onClick={() => setFilter(category.id)}
+            >
+              {category.label}
+            </Button>
+          ))}
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard 
+              key={project.title}
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              imageUrl={project.imageUrl}
+              projectUrl={project.projectUrl}
+              delay={0.1 * index}
+            />
+          ))}
         </div>
       </div>
     </section>
